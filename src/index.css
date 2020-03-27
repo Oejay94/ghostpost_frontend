@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card {
+  text-align: center;
+  position: relative;
+  left: 35%;
+  top: 70px;
+}
+
+.card p {
+  position: relative;
+  left: -14px;
+}
+
+form {
+  text-align: center;
+  position: relative;
+  left: -1%;
+  top: 100px;
+}

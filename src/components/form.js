@@ -9,19 +9,19 @@ export default class FormPage extends Component {
     super(props);
     this.state = {
       body: "",
-      boast_or_roast: '',
-      value: true,
+      boast_or_roast: true,
+      value: '',
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleTextChange = this.handleTextChange.bind(this);
   }
 
-  handleInputChange(event) {
+  handleInputChange = event => {
     // const target = event.target;
     // const value = target.type === "checkbox" ? target.checked : target.value;
     // const name = target.name;
-    this.setState({value: !this.state.value})
+    this.setState({boast_or_roast: !this.state.boast_or_roast})
   }
 
   handleTextChange = event => {
@@ -38,7 +38,7 @@ export default class FormPage extends Component {
       },
       body: JSON.stringify({
         body: event.target.children[0].control.value,
-        boast_or_roast: event.target.children[2].control.value
+        boast_or_roast: event.target.children[2].control.checked
       })
     });
     window.location.reload();
@@ -66,7 +66,7 @@ export default class FormPage extends Component {
             <FormCheckbox
               name="boast_or_roast"
               type="checkbox"
-              checked={this.state.value}
+              checked={this.state.boast_or_roast}
               onChange={this.handleInputChange}
             > Yes
             </FormCheckbox>

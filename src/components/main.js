@@ -5,7 +5,7 @@ export default class Main extends React.Component {
     state = {
         ghostpost: [],
         input: "",
-        boast: ""
+        // boast: ""
       };
       componentDidMount() {
         fetch("http://localhost:8000/api/boastroast/")
